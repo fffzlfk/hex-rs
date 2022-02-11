@@ -17,14 +17,14 @@ A simple command line hex viewer written in Rust.
 Installation with AUR
 
 ```bash
-git clone https://aur.archlinux.org/hex-rs.git && cd hex-rs
+git clone https://aur.archlinux.org/hex-rs-bin.git && cd hex-rs
 makepkg -si
 ```
 
 If you use [paru](https://github.com/Morganamilo/paru) or [yay](https://github.com/Jguer/yay):
 
 ```bash
-paru hex-rs
+paru hex-rs-bin
 # or
-yay hex-rs
+yay hex-rs-bin
 ```
