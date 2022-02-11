@@ -69,8 +69,7 @@ fn print_char_bytes(content: &[u8]) -> String {
     res + &" ".repeat(16 - content.len())
 }
 
-fn create_rows(content: &str) -> String {
-    let content = content.as_bytes();
+fn create_rows(content: &[u8]) -> String {
     let mut rows = vec![];
     for i in (0..content.len()).step_by(16) {
         let row = format!(
@@ -117,11 +116,12 @@ edition = "2021"
 log = "0.4.14"
 clap = { version = "3.0.14", features = ["derive"] }
 termion = "*""#
+                .as_bytes()
         )
     );
 }
 
-pub fn display(content: &str) -> std::io::Result<()> {
+pub fn display(content: &[u8]) -> std::io::Result<()> {
     io::stdout().write_all(create_column_name().as_bytes())?;
     io::stdout().write_all(b"\n")?;
     io::stdout().write_all(create_rows(content).as_bytes())?;
