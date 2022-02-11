@@ -12,7 +12,7 @@ arch=("x86_64")
 provides=("hex-rs")
 conflicts=("hex-rs")
 source=("https://github.com/fffzlfk/hex-rs/releases/download/v$pkgver/hex-rs-$pkgver-x86_64.tar.gz")
-sha256sums=("4ede15382bb99d18d7d6840eefa86a922da9cc58e647642cd29e9b825e379b32")
+sha256sums=("33bb0cc77e4be7da90c585027c5c942993bb8c6ce43321f0432886e1999e621a")
 
 package() {
     install -Dm755 hex-rs -t "$pkgdir/usr/bin"
