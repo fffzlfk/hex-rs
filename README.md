@@ -7,7 +7,7 @@ A simple command line hex viewer written in Rust.
 ## Usage/Examples
 
 - Read the contents of a file by passing a valid file path
-    ![](https://i.imgur.com/CDLykPB.png)
+    ![](https://i.imgur.com/nbSN8Jt.png)
 - Read a simple string
     ![](https://i.imgur.com/DTwbqoi.png)
 - Read contents from pipe
@@ -17,6 +17,14 @@ A simple command line hex viewer written in Rust.
 Installation with AUR
 
 ```bash
-git clone https://github.com/fffzlfk/hex-rs && cd hex-rs
+git clone https://aur.archlinux.org/hex-rs.git && cd hex-rs
 makepkg -si
+```
+
+If you use [paru](https://github.com/Morganamilo/paru) or [yay](https://github.com/Jguer/yay):
+
+```bash
+paru hex-rs
+# or
+yay hex-rs
 ```
