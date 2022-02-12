@@ -64,7 +64,7 @@ fn print_char_bytes(content: &[u8]) -> String {
     content.iter().for_each(|byte| match *byte {
         32..=126 => res.push_str(&format!("{}{}", style::Reset, *byte as char)),
         9 | 10 | 13 => res.push_str(&format!("{}.", color::Fg(color::Green))),
-        _ => res.push('.'),
+        _ => res.push_str(&format!("{}.", color::Fg(color::Red))),
     });
     res + &" ".repeat(16 - content.len())
 }
