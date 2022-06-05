@@ -41,17 +41,16 @@ fn print_hex_bytes(content: &[u8]) -> String {
     for i in (0..16).step_by(4) {
         let mut four_bytes = vec![];
         for j in i..i + 4 {
-            let one_byte: String;
-            if j >= content.len() {
-                one_byte = "  ".to_owned();
+            let one_byte: String = if j >= content.len() {
+                "  ".to_owned()
             } else {
                 let char_code = content[j];
-                one_byte = match char_code {
+                match char_code {
                     32..=126 => format!("{}{:02X}", style::Reset, char_code),
                     9 | 10 | 13 => format!("{}{:02X}", color::Fg(color::Green), char_code),
                     _ => format!("{}{:02X}", color::Fg(color::Red), char_code),
                 }
-            }
+            };
             four_bytes.push(one_byte);
         }
         sixteen_bytes.push(four_bytes.join(" "));
