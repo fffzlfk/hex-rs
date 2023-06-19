@@ -14,13 +14,13 @@ A simple command line hex viewer written in Rust.
     ![](https://i.imgur.com/aLx8Dq7.png)
 ## Installation
 
-### Installation with cargo
+### with cargo
 
 ```bash
 cargo install --git https://github.com/fffzlfk/hex-rs.git
 ```
 
-### Installation with AUR
+### with AUR
 
 ```bash
 git clone https://aur.archlinux.org/hex-rs-bin.git && cd hex-rs
